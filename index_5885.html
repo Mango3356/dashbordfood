@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183c35">
+  <meta name="description" content="Dashboard settimanale dei pasti e lista della spesa.">
+  <title>La mia settimana — Meal planner</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="brand"><span class="brand-icon">🍱</span><div><p class="eyebrow">MEAL PLANNER</p><h1>La mia settimana</h1><p class="sub">Cucina orientale, pasti semplici e lista della spesa</p></div></div>
+    <div class="stats">
+      <div class="stat"><strong>7</strong><span>giorni</span></div>
+      <div class="stat"><strong id="done-count">0</strong><span>pasti completati</span></div>
+      <div class="stat"><strong id="progress">0%</strong><span>progresso</span></div>
+    </div>
+    <div class="progress-track"><div id="progress-bar"></div></div>
+  </header>
+
+  <main>
+    <section aria-labelledby="days-title">
+      <div class="section-heading"><div><p class="eyebrow">IL TUO PROGRAMMA</p><h2 id="days-title">Scegli il giorno</h2></div><button id="today-btn" class="secondary">Vai a oggi</button></div>
+      <nav id="day-tabs" class="day-tabs" aria-label="Giorni della settimana"></nav>
+    </section>
+
+    <section class="panel" aria-live="polite">
+      <div class="section-heading"><div><p class="eyebrow">PIANO GIORNALIERO</p><h2 id="selected-day-title">Lunedì</h2></div><span class="counter" id="day-counter">0 di 5</span></div>
+      <div id="meal-list" class="meal-list"></div>
+      <div class="actions"><button id="reset-day" class="secondary">Azzera il giorno</button><button id="next-day" class="primary">Giorno successivo →</button></div>
+    </section>
+
+    <section class="panel" aria-labelledby="shopping-title">
+      <div class="section-heading"><div><p class="eyebrow">AL SUPERMERCATO</p><h2 id="shopping-title">Lista della spesa</h2></div><span class="counter" id="shopping-counter">0 acquistati</span></div>
+      <p class="muted">Spunta ciò che hai già comprato. Le selezioni vengono salvate su questo dispositivo.</p>
+      <div id="shopping-list" class="shopping-list"></div>
+      <div class="actions"><button id="copy-shopping" class="secondary">Copia ciò che manca</button><button id="reset-shopping" class="secondary">Azzera lista</button></div>
+      <p id="copy-status" class="muted small" role="status"></p>
+    </section>
+
+    <aside class="tip"><strong>🌿 Un piccolo promemoria</strong><p>Usa la salsa di soia con moderazione e scegli verdure crude o cotte in base a come le tolleri. Questo menù è un esempio generale, non una dieta medica. Se il gonfiore è frequente o persistente, parlane con un professionista sanitario.</p></aside>
+  </main>
+  <footer>Creato per organizzare i pasti · I dati restano nel browser di questo dispositivo.</footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "La mia settimana — Meal planner",
+  "short_name": "Meal planner",
+  "description": "Dashboard settimanale dei pasti e lista della spesa.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f5ef",
+  "theme_color": "#183c35",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
